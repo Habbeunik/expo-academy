@@ -50,7 +50,7 @@ export const HomeScreen = props => {
       >
         Go to github
       </Text>
-      <Video source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4'}} style={{ width: '100%', height: 300 }} shouldPlay volume={1.0} isMuted={false} useNativeControls isLooping />
+      <Video source={require('../../assets/videoplayback.mp4')} style={{ width: '100%', height: 300 }} shouldPlay volume={1.0} isMuted={false} useNativeControls isLooping />
       {isPermitted ? <Button title='Select Image From Library' onPress={triggleImagePicker} /> : <Text>Camera Permission not supported</Text>}
       {selectedImage && <Image source={{ uri: selectedImage }} style={{ width: '100%', height: 400}}/>}
     </ScrollView>
